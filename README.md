@@ -34,6 +34,8 @@ Below is the picture of the result for the 16-queen problem:
 
 The picture showcases a valid configuration of 16 queens on a 16×16 chessboard, where no two queens threaten each other. This solution represents the successful outcome of the code in solving the N-queen problem for 16 queens.
 
+In an ordinary implementation of an 8-queen solver using the greedy method, it typically takes around 40 seconds to solve the problem for 16 queens.
+
 ## Note
 
 This implementation uses a greedy search algorithm with a heuristic function to find the next move. The algorithm may not always find an optimal solution, but it provides a good approximation.
