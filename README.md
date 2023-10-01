@@ -1,6 +1,6 @@
 # N-Queen Problem Solver
 ![photo_2023-10-01_20-43-37](https://github.com/peyman-paknezhad/N-queen-heuristic/assets/102018763/3718602f-8ddd-429e-b43d-38f035e56ea0)
-46 change, 0.085 second
+
 
 The N-Queen problem is a puzzle where the goal is to place N chess queens on an N×N chessboard such that no two queens threaten each other. This means that no two queens should share the same row, column, or diagonal. It is a challenging problem because the number of possible configurations grows exponentially with the size of the board. Solving the N-Queen problem typically involves using search algorithms to explore different queen placements on the board and find a valid solution. The greedy search algorithm used in this implementation makes iterative moves to improve the queen placements based on a heuristic function, but it may not always find the optimal solution.
 
@@ -31,7 +31,7 @@ The output of the code that solves the N-queen problem can be very good, as it p
 Below is the picture of the result for the 16-queen problem:
 
 ![1](https://github.com/peyman-paknezhad/N-queen-heuristic/assets/102018763/06c50d72-148b-4389-b6fd-aa78f22ba1a8)
-
+46 change, 0.085 second
 
 The picture showcases a valid configuration of 16 queens on a 16×16 chessboard, where no two queens threaten each other. This solution represents the successful outcome of the code in solving the N-queen problem for 16 queens.
 
