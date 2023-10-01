@@ -1,58 +1,59 @@
 # N-Queen Problem Solver
 
-This is a Python code that solves the N-Queen problem using a greedy search algorithm. The N-Queen problem is a classic puzzle where the goal is to place N queens on an NxN chessboard in such a way that no two queens threaten each other. In other words, no two queens should share the same row, column, or diagonal.
+The N-Queen problem is a puzzle where the goal is to place N chess queens on an N×N chessboard such that no two queens threaten each other. This means that no two queens should share the same row, column, or diagonal. It is a challenging problem because the number of possible configurations grows exponentially with the size of the board. Solving the N-Queen problem typically involves using search algorithms to explore different queen placements on the board and find a valid solution. The greedy search algorithm used in this implementation makes iterative moves to improve the queen placements based on a heuristic function, but it may not always find the optimal solution.
 
-## Getting Started
+The N-Queen problem has practical applications in various areas of computer science, serving as a benchmark for evaluating search algorithms and providing insights into problem-solving strategies and combinatorial optimization. By studying and solving this problem, researchers and practitioners gain a deeper understanding of algorithmic techniques and the complexity of combinatorial problems.
 
-To use this code, follow the instructions below:
+## Usage
 
-1. Clone the repository to your local machine.
-2. Make sure you have Python 3 installed.
-3. Open the terminal and navigate to the project directory.
-4. Run the code using the command `python nqueen.py`.
+To use the N-Queen problem solver, follow these steps:
 
-## Code Explanation
+1. Import the required modules:
+   ````python
+   import random
+   import math
+   import time
+   ```
 
-The code consists of a single class called `NQueen`, which represents the N-Queen problem solver. Here's a brief explanation of the class methods:
+2. Define an instance of the `NQueen` class, specifying the board size and an optional seed for randomness:
+   ````python
+   a = NQueen(n=8, seed=1)
+   ```
 
-- `__init__(self, n=8, seed=1)`: Initializes the N-Queen solver with the board size `n` and a random seed for shuffling the queens' positions.
-- `__str__(self)`: Prints the row and column of each queen.
-- `print_board(self)`: Prints the chessboard with queens represented by 'Q' and empty spaces represented by '-'.
-- `setup_board(self)`: Sets up the chessboard by shuffling the queens' positions randomly.
-- `swap(self, x, y)`: Swaps the column of queens in row `x` and `y`.
-- `check(self)`: Checks if the current board configuration is a valid solution.
-- `attack_count(self, row, col)`: Counts the number of queens attacking the queen at position `(row, col)`.
-- `update_positive_diagonal(self)`: Updates the list of queens in each positive diagonal.
-- `board_to_state(self)`: Converts the board configuration to a unique state representation.
-- `total_count(self)`: Counts the total number of queen attacks on the board.
-- `heuristic(self)`: Applies a heuristic function to find the next move with the minimum number of attacks.
-- `greedy_search(self)`: Performs a greedy search to find a solution to the N-Queen problem.
+3. Set up the initial board configuration:
+   ````python
+   a.setup_board()
+   ```
 
-## Example Usage
+4. Solve the N-Queen problem using a greedy search algorithm:
+   ````python
+   a.greedy_search()
+   ```
+
+5. The program will output the board configuration with the queens' positions and the number of moves taken to find a solution.
+
+## Example
+
+Here's an example usage of the N-Queen problem solver with a board size of 8:
 
 ```python
-import random
-import math
-import time
-
-# Create an instance of the NQueen class
-a = NQueen(85, seed=10)
-
-# Set up the chessboard
+a = NQueen(8, seed=10)
 a.setup_board()
-
-# Solve the N-Queen problem using greedy search
 a.greedy_search()
 ```
 
+This will output the final board configuration and the number of moves taken to find a solution.
+
 ## Performance
 
-The performance of the code may vary depending on the board size and the initial configuration. The time taken to find a solution is printed at the end of the code execution.
+The performance of the solver depends on the board size. Larger board sizes may require more time to find a solution. In the example above, the solver is set to solve the N-Queen problem for a board size of 8. The time taken to find a solution is printed at the end of the program.
 
-## Contributions
+## Note
 
-Contributions to this project are welcome. If you find any issues or have suggestions for improvements, please feel free to open an issue or submit a pull request.
+This implementation uses a greedy search algorithm with a heuristic function to find the next move. The algorithm may not always find an optimal solution, but it provides a good approximation.
 
-## License
+Feel free to modify the code and experiment with different board sizes and seed values to explore the N-Queen problem further.
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
+---
+
+*This code was developed as part of a project to solve the N-Queen problem using a greedy search algorithm. It is provided as-is without any warranty. Feel free to use and modify it for your own purposes.
