@@ -30,7 +30,7 @@ The output of the code that solves the N-queen problem can be very good, as it p
 
 Below is the picture of the result for the 16-queen problem:
 
-![1](https://github.com/peyman-paknezhad/N-queen-heuristic/assets/102018763/06c50d72-148b-4389-b6fd-aa78f22ba1a8)
+![1](https://raw.githubusercontent.com/peyman-paknezhad/N-queen-heuristic/main/pic/hue%202.JPG)
 46 change, 0.085 second
 
 The picture showcases a valid configuration of 16 queens on a 16×16 chessboard, where no two queens threaten each other. This solution represents the successful outcome of the code in solving the N-queen problem for 16 queens.
